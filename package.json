@@ -1,0 +1,15 @@
+{
+  "name": "portcursor",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.x.x",
+    "vite": "^5.x.x"
+  }
+}
