@@ -3,7 +3,7 @@
   --text-dark: #ffffff;
   --bg-light: #ffffff;
   --text-light: #121212;
-  --accent-color: #64ffda;
+  --accent-color: #eeb702;
 }
 
 * {
@@ -61,7 +61,7 @@ body.light-theme {
   height: 300px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--accent-color);
+  border: 3px #121212;
 }
 
 .profile-info {
