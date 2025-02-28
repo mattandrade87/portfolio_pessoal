@@ -53,12 +53,12 @@ body.light-theme {
   gap: 4rem;
   align-items: center;
   justify-content: center;
-  min-height: 80vh;
+  min-height: 70vh;
 }
 
 .profile-image img {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px #121212;
@@ -66,6 +66,7 @@ body.light-theme {
 
 .profile-info {
   max-width: 600px;
+  margin-top: 3rem;
 }
 
 h1 {
@@ -115,7 +116,7 @@ h2 {
 }
 
 .projects-info {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   padding: 1rem;
   border-left: 3px solid var(--accent-color);
 }
@@ -290,5 +291,87 @@ h2 {
     width: 95%;
     margin: 1rem;
     padding: 1.5rem;
+  }
+}
+
+/* Estilos da seção de tecnologias */
+.tech-container {
+  margin-top: 2.5rem;
+}
+
+.tech-title {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tech-icon {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.light-theme .tech-icon {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tech-icon:hover {
+  transform: translateY(-5px);
+  background-color: rgba(238, 183, 2, 0.1);
+}
+
+.tech-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.tech-name {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.light-theme .tech-name {
+  color: var(--text-light);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .tech-container {
+    margin-top: 2rem;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .tech-icon {
+    width: 80px;
+    height: 80px;
+    padding: 0.8rem;
+  }
+
+  .tech-name {
+    font-size: 0.8rem;
   }
 }
