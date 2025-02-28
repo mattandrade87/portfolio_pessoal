@@ -174,3 +174,121 @@ h2 {
     font-size: 1.2rem;
   }
 }
+
+/* Estilos do botão Sobre */
+.about-toggle {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 2;
+}
+
+.about-toggle button {
+  background: none;
+  border: none;
+  color: var(--text-dark);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.about-toggle button i {
+  font-size: 1.2rem;
+}
+
+.about-toggle button:hover {
+  transform: scale(1.1);
+  color: var(--accent-color);
+}
+
+/* Estilos do Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-content {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+  margin: auto;
+  padding: 2rem;
+  border-radius: 8px;
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  transform: translateY(-20px);
+  transition: transform 0.3s ease;
+}
+
+.modal.active .modal-content {
+  transform: translateY(0);
+}
+
+.light-theme .modal-content {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: var(--text-dark);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: transform 0.3s;
+}
+
+.light-theme .close-modal {
+  color: var(--text-light);
+}
+
+.close-modal:hover {
+  transform: rotate(90deg);
+  color: var(--accent-color);
+}
+
+.about-text {
+  margin-top: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .about-toggle {
+    right: 2rem;
+  }
+
+  .modal-content {
+    width: 95%;
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}

@@ -5,12 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mateus Andrade - Desenvolvedor Full Stack</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
-    <div class="theme-toggle">
-      <button id="themeButton" aria-label="Alternar tema">
-        <i class="fas fa-moon"></i>
+    <!-- Novo botão Sobre -->
+    <div class="about-toggle">
+      <button id="aboutButton" aria-label="Sobre mim">
+        <i class="fas fa-address-card"></i>
+        Sobre mim
       </button>
+    </div>
+
+    <!-- Modal Sobre -->
+    <div id="aboutModal" class="modal">
+      <div class="modal-content">
+        <button class="close-modal">
+          <i class="fas fa-times"></i>
+        </button>
+        <h2>Sobre Mim</h2>
+        <div class="about-text">
+          <p>
+            Sou estudante de Sistemas de Informação na Universidade Federal de
+            Ouro Preto, Atuei no desenvolvimento de uma aplicação e-commerce,
+            englobando Back-end, Front-end e Mobile.
+          </p>
+          <p>
+            Utilizei tecnologias como React, React Native, Node.js e TypeScript
+            para garantir uma experiência fluida e responsiva. Integrei o banco
+            de dados PostgreSQL para gerenciar informações de SignUp e Login, e
+            utilizei gerenciar informações de SignUp e Login, e utilizei Docker
+            para assegurar a portabilidade para processos de deploy, priorizando
+            estabilidade e segurança.
+          </p>
+
+          <p>
+            Colaborei diretamente com a equipe da empresa para alinhar
+            requisitos e entregar novas funcionalidades.
+          </p>
+        </div>
+      </div>
     </div>
 
     <div class="background-animation"></div>
@@ -63,7 +99,6 @@
       </section>
     </main>
 
-    <script src="https://kit.fontawesome.com/seu-codigo.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

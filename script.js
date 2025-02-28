@@ -1,15 +1,28 @@
 const themeButton = document.getElementById("themeButton");
 const body = document.body;
 
-themeButton.addEventListener("click", () => {
-  body.classList.toggle("light-theme");
-  const icon = themeButton.querySelector("i");
+// Controle do Modal Sobre
+const aboutButton = document.getElementById("aboutButton");
+const aboutModal = document.getElementById("aboutModal");
+const closeModal = document.querySelector(".close-modal");
 
-  if (body.classList.contains("light-theme")) {
-    icon.classList.remove("fa-moon");
-    icon.classList.add("fa-sun");
-  } else {
-    icon.classList.remove("fa-sun");
-    icon.classList.add("fa-moon");
+function toggleModal() {
+  aboutModal.classList.toggle("active");
+}
+
+aboutButton.addEventListener("click", toggleModal);
+closeModal.addEventListener("click", toggleModal);
+
+// Fechar modal ao clicar fora
+aboutModal.addEventListener("click", (e) => {
+  if (e.target === aboutModal) {
+    toggleModal();
+  }
+});
+
+// Fechar modal com tecla ESC
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && aboutModal.classList.contains("active")) {
+    toggleModal();
   }
 });
