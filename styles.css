@@ -45,6 +45,18 @@ body.light-theme {
   animation: gradientMove 15s ease infinite;
 }
 
+@media (max-width: 768px) {
+  .background-animation {
+    opacity: 0.05;
+    background: linear-gradient(
+      30deg,
+      transparent 60%,
+      var(--accent-color) 61%
+    );
+    animation: gradientMove 20s ease infinite;
+  }
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -347,8 +359,7 @@ h2 {
   .about-toggle {
     top: 2rem;
     right: 0rem;
-    left: 17rem;
-    position: relative;
+    position: absolute;
   }
 
   .modal-content {
