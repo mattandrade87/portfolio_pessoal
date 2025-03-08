@@ -348,10 +348,10 @@ h2 {
 /* Ajustes responsivos */
 @media (max-width: 768px) {
   .about-toggle {
-    position: fixed;
     top: 2rem;
-    right: 1rem;
-    z-index: 2;
+    right: 0rem;
+    left: 22rem;
+    position: relative;
   }
 
   .modal-content {
