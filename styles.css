@@ -358,10 +358,10 @@ h2 {
 @media (max-width: 768px) {
   .about-toggle {
     top: 2rem;
-    right: 0rem;
+    right: 0;
+    left: auto;
     position: absolute;
   }
-
   .modal-content {
     width: 95%;
     margin: 1rem;
