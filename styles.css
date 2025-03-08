@@ -48,7 +48,7 @@ body.light-theme {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0rem;
   position: relative;
   z-index: 1;
 }
@@ -124,6 +124,18 @@ h2 {
   margin-top: 2.5rem;
   padding: 1rem;
   border-left: 3px solid var(--accent-color);
+  background-color: rgba(238, 183, 2, 0.05);
+  border-radius: 0 8px 8px 0;
+  transition: all 0.3s ease;
+}
+
+.projects-info p {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.projects-info p:last-child {
+  margin-bottom: 0;
 }
 
 .theme-toggle {
@@ -164,12 +176,18 @@ h2 {
   .profile-section {
     flex-direction: column;
     text-align: center;
-    gap: 2rem;
+    gap: 0rem;
+    min-height: auto; /* Remove a altura mínima */
+    padding: 2rem 1rem; /* Reduz o espaçamento interno */
   }
 
   .profile-image img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
+  }
+  .profile-info {
+    max-width: 600px;
+    margin-top: 1rem;
   }
 
   h1 {
@@ -178,6 +196,42 @@ h2 {
 
   h2 {
     font-size: 1.2rem;
+  }
+
+  .projects-info {
+    margin-top: 2rem;
+    padding: 0.8rem;
+    text-align: left;
+    border-left: none;
+    border-top: 3px solid var(--accent-color);
+    border-radius: 0 0 8px 8px;
+    font-size: 1rem;
+  }
+
+  .projects-info p {
+    margin-bottom: 0.6rem;
+  }
+
+  .contact-info {
+    width: 100%;
+    max-width: 400px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 0.5rem;
+    white-space: nowrap; /* Impede a quebra de linha */
+    font-size: 1.27rem; /* Reduz um pouco o tamanho da fonte para caber melhor */
+    overflow: hidden; /* Evita que o conteúdo ultrapasse a tela */
+    text-overflow: ellipsis; /* Adiciona "..." caso o texto seja muito grande */
+  }
+
+  .contact-item i {
+    flex-shrink: 0; /* Impede que o ícone seja redimensionado */
   }
 }
 
@@ -294,7 +348,10 @@ h2 {
 /* Ajustes responsivos */
 @media (max-width: 768px) {
   .about-toggle {
-    right: 2rem;
+    position: fixed;
+    top: 2rem;
+    right: 1rem;
+    z-index: 2;
   }
 
   .modal-content {
