@@ -177,8 +177,8 @@ h2 {
     flex-direction: column;
     text-align: center;
     gap: 0rem;
-    min-height: auto; /* Remove a altura mínima */
-    padding: 2rem 1rem; /* Reduz o espaçamento interno */
+    min-height: auto;
+    padding: 2rem 1rem;
   }
 
   .profile-image img {
@@ -224,18 +224,17 @@ h2 {
     align-items: center;
     justify-content: left;
     gap: 0.5rem;
-    white-space: nowrap; /* Impede a quebra de linha */
-    font-size: 1.27rem; /* Reduz um pouco o tamanho da fonte para caber melhor */
-    overflow: hidden; /* Evita que o conteúdo ultrapasse a tela */
-    text-overflow: ellipsis; /* Adiciona "..." caso o texto seja muito grande */
+    white-space: nowrap;
+    font-size: 1.27rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .contact-item i {
-    flex-shrink: 0; /* Impede que o ícone seja redimensionado */
+    flex-shrink: 0;
   }
 }
 
-/* Estilos do botão Sobre */
 .about-toggle {
   position: fixed;
   top: 2rem;
@@ -266,7 +265,6 @@ h2 {
   color: var(--accent-color);
 }
 
-/* Estilos do Modal */
 .modal {
   display: none;
   position: fixed;
@@ -345,12 +343,11 @@ h2 {
   text-align: justify;
 }
 
-/* Ajustes responsivos */
 @media (max-width: 768px) {
   .about-toggle {
     top: 2rem;
     right: 0rem;
-    left: 22rem;
+    left: 17rem;
     position: relative;
   }
 
@@ -361,7 +358,6 @@ h2 {
   }
 }
 
-/* Estilos da seção de tecnologias */
 .tech-container {
   margin-top: 2.5rem;
 }
@@ -421,7 +417,6 @@ h2 {
   color: var(--text-light);
 }
 
-/* Ajustes responsivos */
 @media (max-width: 768px) {
   .tech-container {
     margin-top: 2rem;
@@ -443,7 +438,6 @@ h2 {
   }
 }
 
-/* Permitir seleção apenas em textos do modal */
 .about-text {
   -webkit-user-select: text;
   -moz-user-select: text;
@@ -452,7 +446,6 @@ h2 {
   cursor: text;
 }
 
-/* Garantir que links mantenham o cursor pointer */
 a,
 button {
   cursor: pointer;
